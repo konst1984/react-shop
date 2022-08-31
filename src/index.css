@@ -1,13 +1,119 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+	'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav {
+	padding: 0 1rem;
+}
+
+.content {
+	min-height: calc(100vh - 64px - 70px);
+	padding: 4.5rem 0px;
+}
+
+.goods {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 1rem;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+}
+
+.card-content {
+	flex-grow: 1;
+}
+
+.right {
+	font-size: 1.8rem;
+}
+
+.card-action {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.cart {
+	position: fixed;
+	top: 70px;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	cursor: pointer;
+	z-index: 5;
+	padding: 1rem;
+}
+
+.basket-list {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: aliceblue;
+	width: 50rem;
+	max-width: 95%;
+	box-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 1);
+	animation: show 0.5s ease-in-out;
+}
+
+.basket-close {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	cursor: pointer;
+}
+
+.basket-delete {
+	cursor: pointer;
+}
+
+@keyframes show {
+	from {
+		top: 70%;
+		opacity: 0;
+	}
+	to {
+		top: 50%;
+		opacity: 1;
+	}
+}
+.basket-quantity{
+	cursor: pointer;
+	vertical-align: middle;
+	color: #01579b;
+	border: 1px solid #01579b;
+	margin: 0 5px ;
+}
+
+.collection-item.active{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#toast-container{
+	top: 27px;
+	left: 25%;
+	animation: fade-in 0.25s ease-in-out;
+}
+
+.toast {
+	width: fit-content;
+}
+@keyframes fade-in {
+	from {
+		opacity: 0;
+		transform: translateY(2rem);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0rem);
+	}
 }
