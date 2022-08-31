@@ -6,7 +6,12 @@ const Footer = () => {
       <div className="footer-copyright">
         <div className="container">
           © {new Date().getFullYear()} Copyright Text
-          <a className="grey-text text-lighten-4 right" href="store/src/components/Footer/Footer#!">
+          <a
+            className="grey-text text-lighten-4 right"
+            href="https://konst1984.github.io/react-shop/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Repo
           </a>
         </div>
