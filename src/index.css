@@ -91,11 +91,14 @@ nav {
 	border: 1px solid #01579b;
 	margin: 0 5px ;
 }
-
+.collection-item{
+	user-select: none;
+}
 .collection-item.active{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	user-select: none;
 }
 
 #toast-container{

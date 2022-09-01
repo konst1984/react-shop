@@ -1,6 +1,6 @@
-import React from 'react';
+import { useContext } from 'react';
 
-import PropTypes from 'prop-types';
+import { ShopContext } from '../context/context';
 
 const GoodsItem = (props) => {
   const {
@@ -9,9 +9,10 @@ const GoodsItem = (props) => {
     displayDescription: description,
     price: { finalPrice: price },
     displayAssets,
-    addToBasket,
   } = props;
   const { full_background } = displayAssets[0];
+
+  const { addToBasket } = useContext(ShopContext);
   return (
     <div className="card">
       <div className="card-image">
@@ -40,12 +41,8 @@ const GoodsItem = (props) => {
   );
 };
 
-GoodsItem.propTypes = {
-  addToBasket: PropTypes.func,
-};
+GoodsItem.propTypes = {};
 
-GoodsItem.defaultProps = {
-  addToBasket: () => {},
-};
+GoodsItem.defaultProps = {};
 
 export default GoodsItem;
