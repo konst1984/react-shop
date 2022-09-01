@@ -1,12 +1,12 @@
 import React, { useEffect, useContext } from 'react';
 
 import { API_KEY, API_URL } from '../../config';
-import Alert from '../Alert/Alert';
-import BasketList from '../BasketList/BasketList';
-import Cart from '../Cart/Cart';
+import { Alert } from '../Alert';
+import { BasketList } from '../BasketList';
+import { Cart } from '../Cart';
 import { ShopContext } from '../context/context';
-import GoodsList from '../GoodsList/GoodsList';
-import Preloader from '../Preloader/Preloader';
+import { GoodsList } from '../GoodsList';
+import { Preloader } from '../Preloader';
 
 const Shop = () => {
   const { setGoods, loading, order, basketShow, alertName } = useContext(ShopContext);

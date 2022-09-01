@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import BasketItem from '../BasketItem/BasketItem';
+import { BasketItem } from '../BasketItem';
 import { ShopContext } from '../context/context';
 
 const BasketList = () => {

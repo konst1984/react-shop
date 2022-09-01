@@ -32,18 +32,10 @@ const BasketItem = ({ id, name, price, quantity }) => {
 };
 
 BasketItem.propTypes = {
+  id: PropTypes.number,
   name: PropTypes.string,
   price: PropTypes.number,
   quantity: PropTypes.number,
-  removeFromBasket: PropTypes.func,
-  decQuantity: PropTypes.func,
-  incQuantity: PropTypes.func,
-};
-
-BasketItem.defaultProps = {
-  removeFromBasket: () => {},
-  decQuantity: () => {},
-  incQuantity: () => {},
 };
 
 export default BasketItem;

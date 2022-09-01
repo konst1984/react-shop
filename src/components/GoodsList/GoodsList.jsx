@@ -1,9 +1,7 @@
 import React, { useContext } from 'react';
 
-import PropTypes from 'prop-types';
-
 import { ShopContext } from '../context/context';
-import GoodsItem from '../GoodsItem/GoodsItem';
+import { GoodsItem } from '../GoodsItem';
 
 const GoodsList = () => {
   const { goods = [] } = useContext(ShopContext);
